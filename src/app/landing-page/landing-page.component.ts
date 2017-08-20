@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-  constructor() { }
+  carryImagePath: string;
+  constructor() {
+    this.carryImagePath = 'assets/images/arrow.png';
+  }
 
   ngOnInit(): void {
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
   }
 }
