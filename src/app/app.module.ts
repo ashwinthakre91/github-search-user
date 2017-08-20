@@ -6,12 +6,13 @@ import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'ng2-materialize';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './shared/services/in-memory-data.service';
-
+// routing module
 import { AppRoutingModule } from './app-routing.module';
-
+// components
 import { AppComponent } from './app.component';
+// services
 import { HeroService } from './shared/services/hero.service';
+import { InMemoryDataService } from './shared/services/in-memory-data.service';
 
 @NgModule({
   declarations: [
