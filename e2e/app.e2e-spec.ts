@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('rapidlo App', () => {
+describe('my-dream-app App', () => {
   let page: AppPage;
 
   beforeEach(() => {
