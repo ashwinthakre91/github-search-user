@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-  carryImagePath: string;
+  restaurantImagePath: string;
   constructor() {
-    this.carryImagePath = 'assets/images/arrow.png';
+    this.restaurantImagePath = 'assets/images/restaurant.jpg';
   }
 
   ngOnInit(): void {
