@@ -46,8 +46,7 @@ export class LandingPageComponent implements OnInit {
     // set navbar background color when scrolling.
     const navInitialClassimeoutId = setTimeout(() => {
       $('.navClass').css({
-        'background-color': 'black',
-        'opacity': 0.7,
+        'background-color': 'rgba(0,0,0,0.5)',
         'color': 'white'
       });
     }, 0);
