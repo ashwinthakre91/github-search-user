@@ -13,10 +13,12 @@ export class LandingPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // initialize parallax
     $('.parallax').parallax();
 
+    // initialize typed
     const typed = new Typed('.type', {
-      strings: ['neighbor', 'family', 'team', 'community'],
+      strings: ['Automate table orders.', 'Enhance dining experience.'],
       stringsElement: null,
       // typing speed
       typeSpeed: 60,
@@ -38,6 +40,35 @@ export class LandingPageComponent implements OnInit {
       attr: null,
       // either html or text
       contentType: 'html'
+    });
+
+
+    // set navbar background color when scrolling.
+    let scrollStart = 0;
+    const typedText = $('#typedText');
+    const typedTextOffset = typedText.offset();
+    const navInitialClassimeoutId = setTimeout(() => {
+      $('.navClass').css({
+        'background-color': 'transparent',
+        'opacity': 1,
+        'color': 'white'
+      });
+    }, 0);
+    $(document).scroll(function() {
+      scrollStart = $(this).scrollTop();
+      if (scrollStart > typedTextOffset.top - 40) {
+        $('.navClass').css({
+          'background-color': 'black',
+          'opacity': 0.7,
+          'color': 'white'
+          });
+      } else {
+        $('.navClass').css({
+          'background-color': 'transparent',
+          'opacity': 1,
+          'color': 'white'
+        });
+      }
     });
   }
 }
