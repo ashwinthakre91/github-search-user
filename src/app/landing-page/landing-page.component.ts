@@ -9,7 +9,7 @@ import * as Typed from 'typed.js';
 export class LandingPageComponent implements OnInit {
   restaurantImagePath: string;
   constructor() {
-    this.restaurantImagePath = 'assets/images/restaurant.jpg';
+    this.restaurantImagePath = 'assets/images/restaurant6.jpg';
   }
 
   ngOnInit(): void {
@@ -44,16 +44,16 @@ export class LandingPageComponent implements OnInit {
 
 
     // set navbar background color when scrolling.
-    let scrollStart = 0;
-    const topTypedText = $('#topTypedText');
-    const topTypedTextOffset = topTypedText.offset();
     const navInitialClassimeoutId = setTimeout(() => {
       $('.navClass').css({
-        'background-color': 'transparent',
-        'opacity': 1,
+        'background-color': 'black',
+        'opacity': 0.7,
         'color': 'white'
       });
     }, 0);
+    /*let scrollStart = 0;
+    const topTypedText = $('#topTypedText');
+    const topTypedTextOffset = topTypedText.offset();
     $(document).scroll(function() {
       scrollStart = $(this).scrollTop();
       if (scrollStart > topTypedTextOffset.top - 40) {
@@ -69,6 +69,6 @@ export class LandingPageComponent implements OnInit {
           'color': 'white'
         });
       }
-    });
+    });*/
   }
 }
