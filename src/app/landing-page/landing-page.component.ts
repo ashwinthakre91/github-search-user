@@ -45,8 +45,8 @@ export class LandingPageComponent implements OnInit {
 
     // set navbar background color when scrolling.
     let scrollStart = 0;
-    const typedText = $('#typedText');
-    const typedTextOffset = typedText.offset();
+    const topTypedText = $('#topTypedText');
+    const topTypedTextOffset = topTypedText.offset();
     const navInitialClassimeoutId = setTimeout(() => {
       $('.navClass').css({
         'background-color': 'transparent',
@@ -56,7 +56,7 @@ export class LandingPageComponent implements OnInit {
     }, 0);
     $(document).scroll(function() {
       scrollStart = $(this).scrollTop();
-      if (scrollStart > typedTextOffset.top - 40) {
+      if (scrollStart > topTypedTextOffset.top - 40) {
         $('.navClass').css({
           'background-color': 'black',
           'opacity': 0.7,
