@@ -15,16 +15,23 @@
 
 <!--top image-->
 <div id="topImage" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center" style="margin-top: 30%">
+        <div id="topTypedText" class="text" style="color: white;">
+          <span class="type"></span>
+        </div>
+      </div>
+      <div class="row center">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Get started
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="parallax"><img [src]="restaurantImagePath"></div>
 </div>
-<div id="typedText" class="text" style="position: absolute;top: 30vh;left: 60vw;color: white">
-  <span class="type"></span>
-</div>
-<div style="position: absolute;top: 40vh;left: 65vw;">
-  <button class="btn waves-effect waves-light" type="submit" name="action">Get started
-    <i class="material-icons right">send</i>
-  </button>
-</div>
+
 
 <div class="section white">
   <div class="row container">
