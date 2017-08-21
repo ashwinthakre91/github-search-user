@@ -1,10 +1,14 @@
+body {background-color:#555;}
+.navbar-fixed {position: absolute;z-index:999999999;}
+
 .parallax-container {
   height: 100vh;
 }
 
-span {
+/*typed.js overrided*/
+span.type {
   font-family: Arial;
-  font-size: 25px;
+  font-size: xx-large;
 }
 span.type {
   margin: 0 auto;
@@ -16,13 +20,11 @@ span.type::after {
   display: inline;
   animation: blink 0.7s infinite;
 }
-
 /*Removes cursor that comes with typed.js*/
 .typed-cursor {
   opacity: 0;
   display: none;
 }
-
 /*Custom cursor animation*/
 @keyframes blink {
   0% {
