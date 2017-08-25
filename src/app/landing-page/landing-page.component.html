@@ -4,10 +4,10 @@
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">Rapidlo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="badges.html" style="font-weight: bolder">How it works</a></li>
-        <li><a href="badges.html" style="font-weight: bolder">Features</a></li>
-        <li><a href="badges.html" style="font-weight: bolder">Pricing</a></li>
-        <li><a href="sass.html" style="font-weight: bolder">Sign in</a></li>
+        <li><a (click)="scrollToDiv('#howItWorks')" style="font-weight: bolder">How it works</a></li>
+        <li><a (click)="scrollToDiv('#features')" style="font-weight: bolder">Features</a></li>
+        <li><a (click)="scrollToDiv('#pricing')" style="font-weight: bolder">Pricing</a></li>
+        <li><a style="font-weight: bolder">Sign in</a></li>
       </ul>
     </div>
   </nav>
@@ -32,26 +32,30 @@
   <div class="parallax"><img [src]="restaurantImagePath"></div>
 </div>
 
+<!--how it works-->
+<div id="howItWorks" class="section white">
+  <div class="row container">
+    <p class="center-align" style="font-size: xx-large">How it works?</p>
+    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background
+      content or image in this case, is moved at a different speed than the foreground
+      content while scrolling.</p>
+  </div>
+</div>
 
-<div class="section white">
+<!--features-->
+<div id="features" class="section white">
   <div class="row container">
-    <h2 class="header">How it works?</h2>
+    <p class="center-align" style="font-size: xx-large">Features</p>
     <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background
       content or image in this case, is moved at a different speed than the foreground
       content while scrolling.</p>
   </div>
 </div>
-<div class="section white">
+
+<!--pricing-->
+<div id="pricing" class="section white">
   <div class="row container">
-    <h2 class="header">Features</h2>
-    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background
-      content or image in this case, is moved at a different speed than the foreground
-      content while scrolling.</p>
-  </div>
-</div>
-<div class="section white">
-  <div class="row container">
-    <h2 class="header">Pricing</h2>
+    <p class="center-align" style="font-size: xx-large">Pricing</p>
     <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background
       content or image in this case, is moved at a different speed than the foreground
       content while scrolling.</p>

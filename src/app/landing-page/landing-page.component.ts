@@ -70,4 +70,10 @@ export class LandingPageComponent implements OnInit {
       }
     });*/
   }
+  // scroll to particular div
+  scrollToDiv(id: string): void {
+    $('html,body').animate({
+        scrollTop: $(id).offset().top},
+      'slow');
+  }
 }
