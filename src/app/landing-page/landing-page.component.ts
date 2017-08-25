@@ -8,8 +8,18 @@ import * as Typed from 'typed.js';
 })
 export class LandingPageComponent implements OnInit {
   restaurantImagePath: string;
+  analyticsImagePath: string;
+  orderImagePath: string;
+  trackOrderImagePath: string;
+  increaseRevImagePath: string;
+  diningExpImagePath: string;
   constructor() {
     this.restaurantImagePath = 'assets/images/restaurant6.jpg';
+    this.analyticsImagePath = 'assets/images/computer.png';
+    this.orderImagePath = 'assets/images/waiter.png';
+    this.trackOrderImagePath = 'assets/images/tasks.png';
+    this.increaseRevImagePath = 'assets/images/get-money.png';
+    this.diningExpImagePath = 'assets/images/dish.png';
   }
 
   ngOnInit(): void {
