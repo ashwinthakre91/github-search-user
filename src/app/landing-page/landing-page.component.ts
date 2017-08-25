@@ -9,6 +9,7 @@ import * as Typed from 'typed.js';
 export class LandingPageComponent implements OnInit {
   restaurantImagePath: string;
   analyticsImagePath: string;
+  menuCardImagePath: string;
   orderImagePath: string;
   trackOrderImagePath: string;
   increaseRevImagePath: string;
@@ -16,6 +17,7 @@ export class LandingPageComponent implements OnInit {
   constructor() {
     this.restaurantImagePath = 'assets/images/restaurant6.jpg';
     this.analyticsImagePath = 'assets/images/computer.png';
+    this.menuCardImagePath = 'assets/images/menu-card.png';
     this.orderImagePath = 'assets/images/waiter.png';
     this.trackOrderImagePath = 'assets/images/tasks.png';
     this.increaseRevImagePath = 'assets/images/get-money.png';
