@@ -7,7 +7,8 @@ const routes: Routes = [
   { path: 'detail/:id', loadChildren: 'app/shared/components/hero-detail/hero-detail.module#HeroDetailModule' },
   { path: 'heroes', loadChildren: 'app/heroes/heroes.module#HeroesModule'},
   { path: 'landing-page', loadChildren: 'app/landing-page/landing-page.module#LandingPageModule'},
-  { path: 'get-started', loadChildren: 'app/get-started/get-started.module#GetStartedModule'}
+  { path: 'get-started', loadChildren: 'app/get-started/get-started.module#GetStartedModule'},
+  { path: 'sign-in', loadChildren: 'app/sign-in/sign-in.module#SignInModule'}
 ];
 
 @NgModule({
