@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as Typed from 'typed.js';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -14,7 +15,7 @@ export class LandingPageComponent implements OnInit {
   trackOrderImagePath: string;
   increaseRevImagePath: string;
   diningExpImagePath: string;
-  constructor() {
+  constructor(private router: Router) {
     this.restaurantImagePath = 'assets/images/restaurant6.jpg';
     this.analyticsImagePath = 'assets/images/computer.png';
     this.menuCardImagePath = 'assets/images/menu-card.png';
@@ -87,5 +88,9 @@ export class LandingPageComponent implements OnInit {
     $('html,body').animate({
         scrollTop: $(id).offset().top},
       'slow');
+  }
+  // goto link
+  goToLink(link) {
+    this.router.navigate([link]);
   }
 }
