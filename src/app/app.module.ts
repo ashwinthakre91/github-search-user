@@ -30,7 +30,7 @@ import { InMemoryDataService } from './shared/services/in-memory-data.service';
   ],
   providers: [
     HeroService,
-    { provide: APP_BASE_HREF, useValue: '/#' }
+    /*{ provide: APP_BASE_HREF, useValue: '/#' }*/
   ],
   bootstrap: [AppComponent]
 })
