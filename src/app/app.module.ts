@@ -11,8 +11,6 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 // components
 import { AppComponent } from './app.component';
-// services
-import { HeroService } from './shared/services/hero.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +25,6 @@ import { HeroService } from './shared/services/hero.service';
     AppRoutingModule
   ],
   providers: [
-    HeroService,
     /*{ provide: APP_BASE_HREF, useValue: '/#' }*/
   ],
   bootstrap: [AppComponent]
