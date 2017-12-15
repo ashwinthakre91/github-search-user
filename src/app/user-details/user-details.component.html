@@ -1,7 +1,12 @@
 <div class="container" style="margin-top: 1%">
   <div class="row">
-    <div class="col s12 left">
+    <div class="col s12 m4">
       <img src="{{userDetails.avatar_url}}" style="width: 150px">
+    </div>
+    <div class="col s12 m8">
+      <p style="font-size: xx-large;font-weight: 400">
+        {{moreUserInfo.name}}
+      </p>
     </div>
   </div>
 
@@ -15,17 +20,6 @@
       </div>
       <div class="col s7">
         {{moreUserInfo.id}}
-      </div>
-    </div>
-    <div class="row" style="margin-bottom: 0">
-      <div class="col s4">
-        Name
-      </div>
-      <div class="col s1">
-        :
-      </div>
-      <div class="col s7">
-        {{moreUserInfo.name}}
       </div>
     </div>
     <div class="row" style="margin-bottom: 0">
@@ -168,7 +162,7 @@
 
 <!--repository information-->
 
-  <p style="font-size: x-large;text-align: center">Repository Information</p>
+  <p style="font-size: x-large;text-align: center;font-weight: 400">Repository Information</p>
   <table class="bordered responsive-table">
     <thead>
     <tr>
