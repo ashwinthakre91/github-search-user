@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Search for the user name. Wait for the result(micro secs). Get all the related users!!
 
-##Getting started
+## Getting started
 
 Make sure you have the Angular CLI installed globally, then run `npm install` to resolve all dependencies (might take a minute).
 
