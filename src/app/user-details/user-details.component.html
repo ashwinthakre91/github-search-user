@@ -1,3 +1,196 @@
-<div class="container">
-  {{userDetails.login}}
+<div class="container" style="margin-top: 1%">
+  <div class="row">
+    <div class="col s12 left">
+      <img src="{{userDetails.avatar_url}}" style="width: 150px">
+    </div>
+  </div>
+
+  <div class="bio-font">
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Id
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.id}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Name
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.name}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Email
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.email}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Username
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.login}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Company
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.company}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Score
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{userDetails.score}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Site admin
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{userDetails.site_admin}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Location
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.location}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Bio
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.bio}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Public repos
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.public_repos}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Followers
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.followers}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Following
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        {{moreUserInfo.following}}
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Blog
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        <a href="{{moreUserInfo.blog}}" target="_blank">
+          {{moreUserInfo.blog}}
+        </a>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col s4">
+        Repository url
+      </div>
+      <div class="col s1">
+        :
+      </div>
+      <div class="col s7">
+        <a href="{{moreUserInfo.html_url}}" style="" target="_blank">
+          {{moreUserInfo.html_url}}
+        </a>
+      </div>
+    </div>
+  </div>
+
+<!--repository information-->
+
+  <p style="font-size: x-large;text-align: center">Repository Information</p>
+  <table class="bordered responsive-table">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>SVN URL</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let repo of reposInfo">
+      <td>{{repo.id}}</td>
+      <td>{{repo.name}}</td>
+      <td>{{repo.description}}</td>
+      <td>
+        <a href="{{repo.svn_url}}" target="_blank">
+        {{repo.svn_url}}
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
 </div>
+

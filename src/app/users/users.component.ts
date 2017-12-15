@@ -22,8 +22,8 @@ import 'rxjs/add/operator/distinctUntilChanged';
 export class UsersComponent implements OnInit {
   heroes: Observable<any>;
   private searchTerms = new Subject<string>();
-  data2 = [];
-  data3 = [];
+  items = [];
+  users = [];
   constructor(
     private usersSearchService: UsersSearchService,
     private router: Router) {
@@ -51,11 +51,11 @@ export class UsersComponent implements OnInit {
       });
     this.heroes.subscribe((response) => {
       console.log('here we are');
-      this.data2.push(response.items);
-      this.data2.forEach((data) => {
-        this.data3 = data;
+      this.items.push(response.items);
+      this.items.forEach((data) => {
+        this.users = data;
       });
-      console.log(this.data3);
+      console.log(this.users);
     });
   }
   gotoUserDetails(item): void {

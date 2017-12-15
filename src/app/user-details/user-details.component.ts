@@ -1,5 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {isUndefined} from 'util';
+import {UsersService} from "../shared/services/users.service";
 
 @Component({
   selector: 'app-user-details',
@@ -10,7 +11,10 @@ import {isUndefined} from 'util';
 export class UserDetailsComponent implements OnInit, OnDestroy{
   userDetails: any = {};
   intervalId: any;
-  constructor() {
+  organisationName: string;
+  moreUserInfo: any = {};
+  reposInfo: any = [];
+  constructor(private usersService: UsersService) {
   }
   ngOnInit(): void {
     this.intervalId = setInterval(() => {
@@ -19,9 +23,22 @@ export class UserDetailsComponent implements OnInit, OnDestroy{
         clearInterval(this.intervalId);
         this.userDetails = JSON.parse(localStorage.getItem('selectedUser'));
         console.log(this.userDetails);
+        // get more user info
+        this.usersService
+          .getMoreUserInfo(this.userDetails.url)
+          .then((response) => {
+          this.moreUserInfo =  response;
+          });
+        // get repository information
+        this.usersService
+          .getReposInfo(this.userDetails.repos_url)
+          .then((response) => {
+          this.reposInfo = response;
+          });
       }
     }, 100);
   }
+
   ngOnDestroy(): void {
     clearInterval(this.intervalId);
   }
