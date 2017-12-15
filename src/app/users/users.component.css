@@ -1,0 +1,10 @@
+.user-name{
+  font-size: medium;
+  color: black;
+  cursor: pointer;
+}
+
+.user-image{
+  width: 100px;
+  cursor: pointer;
+}
