@@ -13,7 +13,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // services
 import { HeroService } from './shared/services/hero.service';
-import { InMemoryDataService } from './shared/services/in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { InMemoryDataService } from './shared/services/in-memory-data.service';
     HttpModule,
     MaterializeModule.forRoot(),
     BrowserAnimationsModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
   ],
   providers: [

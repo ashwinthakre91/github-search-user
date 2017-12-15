@@ -4,16 +4,14 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Hero } from '../models/hero';
-
 @Injectable()
-export class HeroSearchService {
+export class UsersSearchService {
 
   constructor(private http: Http) {}
 
-  search(term: string): Observable<Hero[]> {
+  search(term: string): Observable<any> {
     return this.http
-      .get(`api/heroes/?name=${term}`)
-      .map(response => response.json().data as any[]);
+      .get(`https://api.github.com/search/users?q=${term}`)
+      .map(response => response.json() as any);
   }
 }
