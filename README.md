@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.1.
 
-Search for the user name. Wait for the result(micro secs). Get all the related users!!
+Type the user name. Wait for the result(max 2 secs). Get all the related users!!
 
 ## Getting started
 
